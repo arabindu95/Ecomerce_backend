@@ -19,7 +19,10 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Allowed Multiple Origins
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://e-comerce-web.onrender.com",
+];
 
 //middleware
 app.use(
