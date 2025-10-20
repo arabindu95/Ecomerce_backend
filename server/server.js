@@ -19,15 +19,24 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Allowed Multiple Origins
-const allowedOrigins = ["http://localhost:5173", process.env.allowedOrigins];
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://visionary-florentine-e4ed9a.netlify.app",
+];
 
-//middleware
 app.use(
   cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
-    origin: allowedOrigins,
   })
 );
+
 app.use(express.json());
 app.use(cookieParser());
 
