@@ -19,10 +19,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Allowed Multiple Origins
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://visionary-florentine-e4ed9a.netlify.app",
-];
+const allowedOrigins = ["http://localhost:5173", process.env.allowedOrigins];
 
 //middleware
 app.use(
