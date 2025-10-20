@@ -21,7 +21,7 @@ const port = process.env.PORT || 5000;
 // Allowed Multiple Origins
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://e-comerce-web.onrender.com",
+  "https://visionary-florentine-e4ed9a.netlify.app",
 ];
 
 //middleware
