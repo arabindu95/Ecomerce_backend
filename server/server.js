@@ -41,7 +41,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.get("/", (req, res) => {
-  res.send(`server is properly working brother..i'm thankfull`);
+  res.send(`server is properly working brother..i'm ArabinduChakraborty`);
 });
 app.use("/api/user", userRouter);
 app.use("/api/seller", SellerRouter);
